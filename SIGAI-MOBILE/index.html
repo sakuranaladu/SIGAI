@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SIGAI-学习成果展示</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div class="main">
+	<section>
+		<h1 class="text-c">学习成果展示 <span class="btn btn-f-r">分享</span></h1>
+		<p class="c-000">
+			在白色方块内写一个0到9之间的数字，然后按下"识别"键。你写的数字有<span class="line-bottom">98.08%</span>的几率可以被正确的识别。
+		</p>
+		<div class="canvas">
+			<div class="left">
+				<div class="square">
+					<canvas id="the_stage">your browser don't support canvas!</canvas>
+				</div>
+				<div class="btn" id="mnist-pad-save">点我识别</div>
+				<div class="btn" id="mnist-pad-clear">点我擦除</div>
+			</div>
+			<div class="right">
+				<div class="square b-color" id="mnist-pad-result"></div>
+				<div class="btn" id="connection">识别结果</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<p class="">
+			老师点评：小雪同学这节课上课态度认真，做出的准确率达到了90%，非常棒！快来看看你得了几个皇冠~老师期待和小雪同学的下次见面哦！
+		</p>
+		<div class="img-box">
+			<img src="./images/reward.jpg" alt="">
+			<img src="./images/reward.jpg" alt="">
+			<img src="./images/reward.jpg" alt="">
+			<img src="./images/reward.jpg" alt="">
+			<img src="./images/reward.jpg" alt="">
+			<img src="./images/reward.jpg" alt="">
+			<img src="./images/reward.jpg" alt="">
+			<img src="./images/reward.jpg" alt="">
+			<img src="./images/reward.jpg" alt="">
+		</div>
+		<p>
+			同学你也太优秀了吧，快来继续学习，变身AI科技达人
+		</p>
+		<div class="content">
+			<ul>
+				<li class="course">
+					<span class="flex">
+						<span>二次挑战课程</span> <span>9.9元</span>
+					</span>
+					<a href="./detail.html">
+						立即付款
+					</a>
+				</li>
+				<li class="course">
+					<span class="flex">
+						<span>探秘AI</span> <span>2636元</span>
+					</span>
+					<a href="./detail.html">
+						立即付款
+					</a>
+				</li>
+				<li class="course">
+					<span class="flex">
+						<span>工程师</span> <span>8835元</span>
+					</span>
+					<a href="./detail.html">
+						立即付款
+					</a>
+				</li>
+				<li class="course">
+					<span class="flex">
+						<span>AI未来科学家</span> <span>16999元</span>
+					</span>
+					<a href="./detail.html">
+						立即付款
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+</div>
+<script src="js/signature_pad.min.js"></script>
+<script src="./js/canvas.js"></script>
+</body>
+</html>
