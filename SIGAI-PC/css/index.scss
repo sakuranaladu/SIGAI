@@ -1,0 +1,636 @@
+@charset "UTF-8";
+//css样式初始化
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  color: #333;
+  font-family: PingFangSC-Semibold, Verdana, Microsoft YaHei, Simsun;
+  background: #fff;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+img {
+  vertical-align: top;
+  border: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+input, button, select, textarea {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+//禁用了文本的拖拉，尤其在谷歌下
+p {
+  text-align: justify;
+  text-justify: distribute;
+}
+
+//为了使文本段落左右两边对齐
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f60;
+  text-decoration: none;
+}
+
+$width: 1200px;
+$margin: 0 auto;
+$cursor: pointer;
+
+//header
+.header {
+  width: 100%;
+  height: 710px;
+  background: url("../images/banner@2x.png") no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  header {
+    width: $width;
+    margin: $margin;
+    height: 100px;
+  }
+  .img {
+    float: left;
+    display: inline-block;
+    width: 73px;
+    height: 23px;
+    margin: 39px 23px 0 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .nav {
+    display: inline-block;
+    ul {
+      overflow: hidden;
+      font-size: 15px;
+      letter-spacing: 0;
+      li {
+        float: left;
+        padding: 38px 49px;
+        color: rgba(255, 255, 255, 0.66);
+      }
+      li.cur {
+        color: #fff;
+      }
+    }
+  }
+  .login {
+    float: right;
+    li {
+      float: left;
+      margin-top: 26px;
+      width: 148.8px;
+      height: 42px;
+      line-height: 42px;
+      text-align: center;
+    }
+    li.cur {
+      background: #4990E2;
+      border-radius: 24px
+    }
+  }
+  section {
+    width: $width;
+    margin: 100px auto 0;
+    padding-left: 40px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    h1 {
+      margin-bottom: 13px;
+      font-size: 56px;
+      letter-spacing: 0.7px;
+    }
+    p {
+      font-size: 24px;
+    }
+    .number {
+      margin-top: 27px;
+      .strong {
+        margin-right: 18px;
+        font-size: 56px;
+        color: #FFCD00;
+        strong {
+          margin-left: -10px;
+        }
+      }
+      .del {
+        font-size: 38px;
+        del {
+          margin-left: -5px;
+        }
+      }
+    }
+    .detail-btn {
+      margin-top: 29px;
+      width: 208px;
+      height: 58px;
+      line-height: 58px;
+      text-align: center;
+      cursor: $cursor;
+      font-size: 24px;
+      background: #FFCD00;
+      color: #333;
+      border-radius: 29px;
+    }
+  }
+}
+
+.main {
+  font-family: PingFangSC-Regular;
+  .title {
+    margin: 0 auto 60px;
+    color: #333;
+    text-align: center;
+    h1 {
+      font-size: 46px;
+      letter-spacing: 1.15px;
+    }
+    h1:after {
+      content: '';
+      width: 36px;
+      height: 8px;
+      margin: 30px auto;
+      display: block;
+      background: #333333;
+      border-radius: 4px;
+    }
+    p {
+      font-size: 32px;
+      letter-spacing: 0.8px;
+      text-align: center;
+    }
+  }
+  .btn {
+    margin: 60px auto 0;
+    width: 240px;
+    height: 68px;
+    line-height: 68px;
+    text-align: center;
+    background: #4990E2;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0.3px;
+  }
+  .basic-course {
+    background: url("../images/course@2x.png") no-repeat;
+    background-size: cover;
+    padding: 90px 0;
+
+    .row {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      .col {
+        position: relative;
+        width: calc(100% - 60px);
+        margin-right: 30px;
+        box-shadow: 0 2px 25px 0 rgba(196, 208, 227, 0.50);
+        color: #333333;
+        &:last-child {
+          margin-right: 0;
+        }
+        .personal {
+          position: relative;
+          img {
+            position: absolute;
+            left: 24px;
+            top: -25px;
+            width: 50px;
+            height: 48px;
+            border-radius: 100%;
+          }
+          .teacher {
+            margin: 8px 0 1px 100px;
+            font-family: PingFangSC-Medium;
+            font-size: 16px;
+            letter-spacing: 0.4px;
+          }
+          .course {
+            margin-left: 100px;
+            font-size: 14px;
+            color: #555555;
+            letter-spacing: 0.35px;
+          }
+        }
+        .content {
+          padding: 28px 24px 48px;
+          h3 {
+            margin-bottom: 10px;
+            font-family: PingFangSC-Medium;
+            font-size: 28px;
+            letter-spacing: 0.7px;
+          }
+          p {
+            font-size: 14px;
+            color: #555555;
+            letter-spacing: 0.35px;
+            line-height: 22px;
+            position: relative;
+            height: 66px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &:after {
+              content: "...";
+              position: absolute;
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+        .number {
+          padding: 0 24px 37px;
+          .strong {
+            font-family: PingFangSC-Medium;
+            color: #FF9D2F;
+            letter-spacing: 0.35px;
+            line-height: 20px;
+            font-size: 14px;
+            strong {
+              font-size: 24px;
+              margin-left: -2px;
+            }
+          }
+          .del {
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #999999;
+            letter-spacing: 0.41px;
+            del {
+              margin-left: -2px;
+            }
+          }
+          img {
+            float: right;
+            margin-top: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+      .cur:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: #FDC847;
+        border-radius: 1.5px;
+      }
+    }
+  }
+  .knowledge-base {
+    padding: 73px 0 81px;
+    background: url("../images/know@2x.png") no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    .title {
+      color: #fff;
+      h1 {
+        &:after {
+          background: #fff;
+        }
+      }
+    }
+    .content {
+      font-size: 32px;
+      color: #FFFFFF;
+      letter-spacing: 0.8px;
+      text-align: center;
+      line-height: 52px;
+    }
+    .btn-detail {
+      background: #fff;
+      color: #333333;
+      letter-spacing: 0.3px;
+    }
+  }
+  .cloud-lab {
+    padding: 90px 0;
+    background: url("../images/cloud@2x.png") no-repeat;
+    background-size: 100% 130%;
+
+    .content {
+      width: 1200px;
+      height: 500px;
+      margin: 0 auto;
+      position: relative;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+      z-index: 2;
+      .desc {
+        position: absolute;
+        top: 195px;
+        left: 81px;
+        font-family: PingFangSC-Semibold;
+        font-size: 40px;
+        z-index: 2;
+        span {
+          font-family: PingFangSC-Regular;
+          font-size: 24px;
+          margin: 30px 0 0 44px;
+          display: inline-block;
+        }
+      }
+      .rectangle {
+        display: inline-block;
+        width: 306px;
+        height: 37px;
+        background: #0057D4;
+        position: absolute;
+        left: 99px;
+        top: 221px;
+        z-index: 0;
+      }
+    }
+    .content-ul {
+      overflow: hidden;
+      height: 500px;
+      li {
+        position: relative;
+        float: left;
+        color: #FFFFFF;
+        letter-spacing: 1px;
+        .desc {
+          position: absolute;
+          top: 195px;
+          left: 81px;
+          font-family: PingFangSC-Semibold;
+          font-size: 40px;
+          z-index: 2;
+          span {
+            font-family: PingFangSC-Regular;
+            font-size: 24px;
+            margin: 30px 0 0 44px;
+            display: inline-block;
+          }
+        }
+        .rectangle {
+          display: inline-block;
+          width: 306px;
+          height: 37px;
+          background: #0057D4;
+          position: absolute;
+          left: 99px;
+          top: 221px;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}
+.swiper-button-next,.swiper-button-prev {
+  background: none;
+  top: auto;
+  bottom: 30px;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 40px;
+}
+
+.swiper-button-next:before,.swiper-button-prev:before {
+  font-family: "upsicons";
+  position: absolute;
+  display: block;
+  height: 54px;
+  width: 50px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 54px;
+  color: #fff;
+  font-size: 68px;
+}
+
+.footer {
+  color: #555;
+  letter-spacing: 0.45px;
+  .row {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 280px;
+    .col-img {
+      margin: 106px 148px 106px 0;
+    }
+    .col-follow {
+      margin: 100px 170px 103px 0;
+      p {
+        font-size: 18px;
+      }
+      ul {
+        margin-top: 14px;
+        overflow: hidden;
+        li {
+          float: left;
+          margin-right: 14px;
+          background: #EFEDED;
+          border-radius: 1.2px;
+        }
+      }
+    }
+    .col-address {
+      margin: 87px 171px 91px 0;
+      font-size: 18px;
+      color: #555555;
+    }
+    .col-chat {
+      float: right;
+      margin: 50px 0 58px 0;
+      width: 172px;
+      height: 172px;
+    }
+  }
+  .copy-right {
+    height: 68px;
+    line-height: 68px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 0.35px;
+    background: #F9F9F9;
+  }
+}
+
+.model {
+  width: 480px;
+  /*height: 362px;*/
+  position: absolute;
+  top: 160px;
+  right: 60px;
+  background: #FFFFFF;
+  border: 1px solid rgba(78, 89, 104, 0.19);
+  box-shadow: 0 6px 8px 0 rgba(74, 81, 93, 0.25);
+  border-radius: 4px;
+  .register {
+    padding: 36px 70px 30px;
+  }
+  .get-code {
+    position: absolute;
+    right: 56px;
+    top: 236px;
+    font-size: 14px;
+    color: #4990E2;
+    letter-spacing: 0.17px;
+    cursor: pointer;
+  }
+  label {
+    display: inline-block;
+    margin-top: 8px;
+    color: #555555;
+    font-size: 12px;
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+  }
+
+  .btn {
+    background-image: linear-gradient(-90deg, #4990E2 0%, #4567F4 100%);
+    border-radius: 4px;
+    width: 340px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+    margin: 30px 0 8px 0;
+    cursor: pointer;
+  }
+  p {
+    text-align: center;
+    font-size: 12px;
+    color: #555555;
+    letter-spacing: 0;
+    span {
+      line-height: 17px;
+      color: #4990E2;
+      cursor: pointer;
+    }
+  }
+  input[type='text'] {
+    width: 100%;
+    border: none;
+    background: #FFFFFF;
+    font-size: 14px;
+    color: #BFBFBF;
+    letter-spacing: 0.17px;
+    padding: 40px 0 10px 14px;
+    box-shadow: inset 0 -1px 0 0 #EEEEEE;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  .login {
+    padding: 36px 70px 30px;
+    .logo {
+      text-align: center;
+    }
+    ul {
+      font-size: 16px;
+      color: #555555;
+      letter-spacing: 0;
+      padding: 60px 0 16px 0;
+      overflow: hidden;
+      .float-l{
+        float:left;
+        position: relative;
+      }
+      .float-r {
+        float: right;
+        position: relative;
+      }
+      .cur {
+        color: #4990E2;
+        &:after {
+          content: '';
+          background: #4990E2;
+          width: 36px;
+          height: 2px;
+          display: inline-block;
+          position: absolute;
+          bottom: -6px;
+          left: 14px;
+        }
+      }
+    }
+    .forget-pass {
+      float: right;
+      font-size: 16px;
+      color: #459BFF;
+      letter-spacing: 0;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+  }
+  .forget-password {
+    padding: 36px 70px 30px;
+    ul {
+      overflow: hidden;
+      margin: 0 -18px;
+      padding-bottom: 4px;
+      li {
+        float: left;
+        width: 125px;
+        text-align: center;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #BFBFBF;
+      }
+      li.cur {
+        color: #4990E2;
+        border-bottom: 1px solid #4990E2;
+        position: relative;
+        cursor: pointer;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          display: block;
+          z-index: 111;
+          left: 60px;
+          bottom: -4px;
+          background: #4990E2;
+          border-radius: 100px;
+        }
+      }
+    }
+    .get-code {
+      top: 175px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
